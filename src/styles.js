@@ -1,0 +1,74 @@
+import { makeStyles } from "@mui/styles";
+import { grey, red } from "@mui/material/colors";
+
+const useStyles = makeStyles((theme) => ({
+  image: {
+    height: "100%",
+    width: "100%",
+  },
+  text: {
+    paddingTop: "30px",
+    paddingBottom: "10px",
+  },
+  hero_left: {
+    alignContent: "center",
+  },
+  hero_section: {
+    paddingTop: "70px",
+    marginBottom: "30px",
+  },
+  action_button: {
+    color: "white",
+    borderRadius: "10px",
+  },
+  services_section: {
+    marginTop: "70px",
+    marginBottom: "30px",
+  },
+  services_text: {},
+
+  logos: {
+    width: "50px",
+    marginLeft: "25px",
+  },
+  logos_container: {
+    alignItems: "center",
+  },
+  logos_row: {
+    paddingBottom: "20px",
+  },
+  skills_desc: {
+    paddingBottom: "20px",
+    paddingRightL: "20px",
+  },
+  skills_section: {
+    marginTop: "30px",
+  },
+  portfolio_section: {
+    marginTop: "30px",
+  },
+  portfolio_row: {
+    paddingRight: "20px",
+  },
+  formSection: {
+    // paddingTop: "90px",
+  },
+  social_icon: {
+    marginRight: "20px",
+    color: "red",
+  },
+  mail_contact: {
+    marginRight: "60px",
+  },
+  divider: {
+    marginTop: "40px",
+    marginBottom: "40px",
+  },
+  get_in_touche: {
+    paddingBottom: "20px",
+  },
+  contact_form_text: {
+    paddingBottom: "20px",
+  },
+}));
+export default useStyles;
