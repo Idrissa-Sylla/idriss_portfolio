@@ -236,23 +236,23 @@ function MainContent() {
                 <Typography variant="h5">SOCIAL MEDIA</Typography>
                 <Grid display="flex">
                   <SocialIcon
-                    url="../src/assets/social_icons/linkedin-svgrepo-com.svg"
+                    url="../public/social_icons/linkedin-svgrepo-com.svg"
                     alt="linkedin logo"
                   />
                   <SocialIcon
-                    url="../src/assets/social_icons/facebook-176-svgrepo-com.svg"
+                    url="../public/social_icons/facebook-176-svgrepo-com.svg"
                     alt="linkedin logo"
                   />
                   <SocialIcon
-                    url="../src/assets/social_icons/instagram-167-svgrepo-com.svg"
+                    url="../public/social_icons/instagram-167-svgrepo-com.svg"
                     alt="linkedin logo"
                   />
                   <SocialIcon
-                    url="../src/assets/social_icons/whatsapp-svgrepo-com.svg"
+                    url="../public/social_icons/whatsapp-svgrepo-com.svg"
                     alt="linkedin logo"
                   />
                   <SocialIcon
-                    url="../src/assets/social_icons/telegram-svgrepo-com.svg"
+                    url="../public/social_icons/telegram-svgrepo-com.svg"
                     alt="linkedin logo"
                   />
                 </Grid>
