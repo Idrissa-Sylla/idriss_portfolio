@@ -42,7 +42,7 @@ function MainContent() {
         <Grid className={classes.image_grid} size={{ xs: "12", sm: "grow" }}>
           <img
             className={classes.image}
-            src="../src/assets/idriss1.png"
+            src="./assets/idriss1.png"
             alt="Hero Image"
           />
         </Grid>
@@ -95,96 +95,96 @@ function MainContent() {
           <Grid className={classes.logos_row}>
             <img
               className={classes.logos}
-              src="../src/assets/html-svgrepo-com.svg"
+              src="./assets/html-svgrepo-com.svg"
               alt="html logo"
             />
             <img
               className={classes.logos}
-              src="../src/assets/css-3-svgrepo-com.svg"
+              src="./assets/css-3-svgrepo-com.svg"
               alt="html logo"
             />
             <img
               className={classes.logos}
-              src="../src/assets/js-official-svgrepo-com.svg"
+              src="./assets/js-official-svgrepo-com.svg"
               alt="html logo"
             />
             <img
               className={classes.logos}
-              src="../src/assets/tailwind-svgrepo-com.svg"
+              src="./assets/tailwind-svgrepo-com.svg"
               alt="html logo"
             />
             <img
               className={classes.logos}
-              src="../src/assets/npm-svgrepo-com.svg"
+              src="./assets/npm-svgrepo-com.svg"
               alt="html logo"
             />
             <img
               className={classes.logos}
-              src="../src/assets/figma-svgrepo-com.svg"
+              src="./assets/figma-svgrepo-com.svg"
               alt="html logo"
             />
             <img
               className={classes.logos}
-              src="../src/assets/react-svgrepo-com.svg"
-              alt="html logo"
-            />
-          </Grid>
-          <Grid className={classes.logos_row}>
-            <img
-              className={classes.logos}
-              src="../src/assets/git-svgrepo-com.svg"
-              alt="html logo"
-            />
-            <img
-              className={classes.logos}
-              src="../src/assets/github-color-svgrepo-com.svg"
-              alt="html logo"
-            />
-            <img
-              className={classes.logos}
-              src="../src/assets/ejs-svgrepo-com.svg"
-              alt="html logo"
-            />
-            <img
-              className={classes.logos}
-              src="../src/assets/expressJs.jpeg"
-              alt="html logo"
-            />
-            <img
-              className={classes.logos}
-              src="../src/assets/firebase-svgrepo-com.svg"
-              alt="html logo"
-            />
-            <img
-              className={classes.logos}
-              src="../src/assets/flutter-svgrepo-com.svg"
+              src="./assets/react-svgrepo-com.svg"
               alt="html logo"
             />
           </Grid>
           <Grid className={classes.logos_row}>
             <img
               className={classes.logos}
-              src="../src/assets/jquery-svgrepo-com.svg"
+              src="./assets/git-svgrepo-com.svg"
               alt="html logo"
             />
             <img
               className={classes.logos}
-              src="../src/assets/node-svgrepo-com.svg"
+              src="./assets/github-color-svgrepo-com.svg"
               alt="html logo"
             />
             <img
               className={classes.logos}
-              src="../src/assets/oracle-svgrepo-com.svg"
+              src="./assets/ejs-svgrepo-com.svg"
               alt="html logo"
             />
             <img
               className={classes.logos}
-              src="../src/assets/postgresql-svgrepo-com.svg"
+              src="./assets/expressJs.jpeg"
               alt="html logo"
             />
             <img
               className={classes.logos}
-              src="../src/assets/rest-api-svgrepo-com (1).svg"
+              src="./assets/firebase-svgrepo-com.svg"
+              alt="html logo"
+            />
+            <img
+              className={classes.logos}
+              src="./assets/flutter-svgrepo-com.svg"
+              alt="html logo"
+            />
+          </Grid>
+          <Grid className={classes.logos_row}>
+            <img
+              className={classes.logos}
+              src="./assets/jquery-svgrepo-com.svg"
+              alt="html logo"
+            />
+            <img
+              className={classes.logos}
+              src="./assets/node-svgrepo-com.svg"
+              alt="html logo"
+            />
+            <img
+              className={classes.logos}
+              src="./assets/oracle-svgrepo-com.svg"
+              alt="html logo"
+            />
+            <img
+              className={classes.logos}
+              src="./assets/postgresql-svgrepo-com.svg"
+              alt="html logo"
+            />
+            <img
+              className={classes.logos}
+              src="./assets/rest-api-svgrepo-com (1).svg"
               alt="html logo"
             />
           </Grid>
@@ -197,21 +197,21 @@ function MainContent() {
         <Grid container>
           <Grid className={classes.portfolio_row}>
             <ProjectCard
-              url="../src/assets/movie_app.png"
+              url="./assets/movie_app.png"
               title="Movie App"
               text="This app allows user to search and view their favorite movies. They have the ability to favorite a particular movie and unfavorite it also"
             />
           </Grid>
           <Grid className={classes.portfolio_row}>
             <ProjectCard
-              url="../src/assets/todo_app.png"
+              url="./assets/todo_app.png"
               title="Todo App"
               text="This TODO App helps users in organizing their daily tasks. They have the ability to check and uncheck a task."
             />
           </Grid>
           <Grid className={classes.portfolio_row}>
             <ProjectCard
-              url="../src/assets/photo_album_app.png"
+              url="./assets/photo_album_app.png"
               title="Photo Album App"
               text="This photo album app displays my photos and allows users to view all my albums. I have captured crucial moments of my life which I think is worth sharing."
             />
@@ -236,23 +236,23 @@ function MainContent() {
                 <Typography variant="h5">SOCIAL MEDIA</Typography>
                 <Grid display="flex">
                   <SocialIcon
-                    url="../public/social_icons/linkedin-svgrepo-com.svg"
+                    url="./assets/social_icons/linkedin-svgrepo-com.svg"
                     alt="linkedin logo"
                   />
                   <SocialIcon
-                    url="../public/social_icons/facebook-176-svgrepo-com.svg"
+                    url="./assets/social_icons/facebook-176-svgrepo-com.svg"
                     alt="linkedin logo"
                   />
                   <SocialIcon
-                    url="../public/social_icons/instagram-167-svgrepo-com.svg"
+                    url="./assets/social_icons/instagram-167-svgrepo-com.svg"
                     alt="linkedin logo"
                   />
                   <SocialIcon
-                    url="../public/social_icons/whatsapp-svgrepo-com.svg"
+                    url="./assets/social_icons/whatsapp-svgrepo-com.svg"
                     alt="linkedin logo"
                   />
                   <SocialIcon
-                    url="../public/social_icons/telegram-svgrepo-com.svg"
+                    url="./assets/social_icons/telegram-svgrepo-com.svg"
                     alt="linkedin logo"
                   />
                 </Grid>
