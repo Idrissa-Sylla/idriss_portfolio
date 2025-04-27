@@ -10,7 +10,7 @@ function ActionButton(props) {
         variant="outlined"
         sx={{
           borderRadius: "10px",
-          fontSize: "1rem",
+          fontSize: { xs: "0.75rem", sm: "1rem", md: "1.60rem" },
           padding: "10px 30px",
         }}
       >

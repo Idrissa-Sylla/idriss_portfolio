@@ -13,13 +13,14 @@ const useStyles = makeStyles((theme) => ({
     alignContent: "center",
   },
   hero_section: {
-    paddingTop: "70px",
+    // marginTop: { xs: "10", md: "70px" },
     marginBottom: "30px",
   },
   action_button: {
     color: "white",
     borderRadius: "10px",
   },
+
   services_section: {
     marginTop: "70px",
     marginBottom: "30px",

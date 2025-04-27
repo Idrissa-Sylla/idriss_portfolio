@@ -8,7 +8,13 @@ function TextInputForm(input) {
   return (
     <Box
       component="form"
-      sx={{ "& > :not(style)": { m: 1, width: "50ch", borderRadius: "20px" } }}
+      sx={{
+        "& > :not(style)": {
+          m: 1,
+          width: { xs: "40ch", sm: "60ch", md: "70ch" },
+          borderRadius: "20px",
+        },
+      }}
       noValidate
       autoComplete="off"
     >

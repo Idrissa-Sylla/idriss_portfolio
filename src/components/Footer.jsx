@@ -1,13 +1,20 @@
 import React from "react";
+import { Typography } from "@mui/material";
 
 function Footer() {
   return (
     <div>
-      <p style={{ padding: "30px", fontSize: "18px" }}>
+      <Typography
+        sx={{
+          fontFamily: "Poppins",
+          padding: { xs: "18px", sm: "20px", md: "20px" },
+          fontSize: { xs: "16px", sm: "24px", md: "24px" },
+        }}
+      >
         © {new Date().getFullYear()} - All rights reserved, UX/UI Design,
         Fullstack web dev, Mobile App dev, Graphic Design, Community Manager -
         Idrissa Sylla
-      </p>
+      </Typography>
     </div>
   );
 }

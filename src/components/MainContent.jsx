@@ -25,13 +25,22 @@ function MainContent() {
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "row", lg: "row" },
+          paddingTop: { xs: "10px", sm: "20px", md: "40px" },
         }}
       >
         <Grid className={classes.hero_left} size={{ xs: "12", sm: "grow" }}>
-          <Typography variant="h2" className={classes.title}>
+          <Typography
+            variant="h2"
+            fontSize={{ xs: "2rem", sm: "3rem", md: "3.75rem" }}
+            lineHeight={{ xs: "3rem", sm: "4rem", md: "5rem" }}
+          >
             FULLSTACK WEB DEVELOPER AND MOBILE APPS
           </Typography>
-          <Typography variant="h6" className={classes.text}>
+          <Typography
+            variant="h6"
+            className={classes.text}
+            sx={{ fontSize: { sm: "28px" } }}
+          >
             I am Idrissa Sylla - web and mobile app developer with a passion for
             creating beautiful and responsive websites and apps
           </Typography>
@@ -57,7 +66,7 @@ function MainContent() {
           spacing={3}
           sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}
         >
-          <Grid size={{ xs: 6, md: 2 }} offset={{ xs: 3, md: 0 }}>
+          <Grid size={{ xs: 2, md: 2 }} offset={{ xs: 0, md: 0 }}>
             <ServicesCard
               title="👨🏻‍💻 Web Development"
               description="I develop full stack web applications with focus on functionality and beautiful user interfaces and UX"
@@ -69,7 +78,7 @@ function MainContent() {
               description="I develop mobile applications with focus on functionality and beautiful user interfaces and UX"
             />
           </Grid>
-          <Grid size={{ xs: 6, md: 2 }} offset={{ xs: 3, md: 0 }}>
+          <Grid size={{ xs: 6, md: 2 }} offset={{ xs: 0, md: 0 }}>
             <ServicesCard
               title="☺ UX/UI Design"
               description="I design high fidelity user interfaces with focus on functionality and beautiful user interfaces and UX"
@@ -84,11 +93,14 @@ function MainContent() {
           className={classes.logos_container}
           container
           display="flex"
-          flexDirection="column"
+          flexDirection="row"
           alignContent="center"
         >
           <Grid className={classes.skills_desc}>
-            <Typography variant="h4">
+            <Typography
+              variant="h4"
+              sx={{ fontSize: { xs: "28px", sm: "38px" } }}
+            >
               The Skills, tools, and technologies I use:
             </Typography>
           </Grid>
@@ -128,8 +140,7 @@ function MainContent() {
               src="./assets/react-svgrepo-com.svg"
               alt="html logo"
             />
-          </Grid>
-          <Grid className={classes.logos_row}>
+
             <img
               className={classes.logos}
               src="./assets/git-svgrepo-com.svg"
@@ -160,8 +171,7 @@ function MainContent() {
               src="./assets/flutter-svgrepo-com.svg"
               alt="html logo"
             />
-          </Grid>
-          <Grid className={classes.logos_row}>
+
             <img
               className={classes.logos}
               src="./assets/jquery-svgrepo-com.svg"
@@ -194,7 +204,7 @@ function MainContent() {
 
       <Box className={classes.portfolio_section}>
         <SectionTitle title="PORTFOLIO" />
-        <Grid container>
+        <Grid container gap={2} alignContent={"center"} alignItems={"center"}>
           <Grid className={classes.portfolio_row}>
             <ProjectCard
               url="./assets/movie_app.png"
@@ -220,20 +230,46 @@ function MainContent() {
       </Box>
       <DividerComponent />
       <Box className={classes.contact_section}>
-        <Grid container display="flex" flexDirection="row">
-          <Grid width="600px" paddingRight="50px">
+        <Grid container display="flex">
+          <Grid width="750px" paddingRight="50px">
             <SectionTitle title="DO YOU HAVE A PROJECT TO DISCUSS ?" />
-            <Typography className={classes.get_in_touche} variant="h4">
+            <Typography
+              className={classes.get_in_touche}
+              variant="h4"
+              sx={{ fontSize: { xs: "28px", sm: "38px" } }}
+            >
               GET IN TOUCHE 💬
             </Typography>
-            <Grid display="flex">
+            <Grid
+              display={"flex"}
+              flexDirection={{ xs: "column", sm: "row", md: "row" }}
+            >
               <div className={classes.mail_contact}>
-                <Typography variant="h5">CONTACT</Typography>
-                <Typography variant="h6">idrisssylla88@gmail.com</Typography>
+                <Typography
+                  variant="h5"
+                  sx={{ fontSize: { xs: "24px", sm: "34px" } }}
+                >
+                  CONTACT
+                </Typography>
+                <Typography
+                  variant="h6"
+                  fontSize={{ xs: "24px", sm: "34px", md: "34px" }}
+                >
+                  idrisssylla88@gmail.com
+                </Typography>
               </div>
 
-              <div>
-                <Typography variant="h5">SOCIAL MEDIA</Typography>
+              <Box>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontSize: { xs: "24px", sm: "34px" },
+                    marginTop: { xs: "20px" },
+                    paddingBottom: { xs: "10px" },
+                  }}
+                >
+                  SOCIAL MEDIA
+                </Typography>
                 <Grid display="flex">
                   <SocialIcon
                     url="./assets/social_icons/linkedin-svgrepo-com.svg"
@@ -256,11 +292,18 @@ function MainContent() {
                     alt="linkedin logo"
                   />
                 </Grid>
-              </div>
+              </Box>
             </Grid>
           </Grid>
           <Grid className={classes.formSection}>
-            <Typography className={classes.contact_form_text} variant="h5">
+            <Typography
+              className={classes.contact_form_text}
+              variant="h5"
+              sx={{
+                fontSize: { xs: "24px", sm: "34px" },
+                marginTop: { xs: "20px" },
+              }}
+            >
               CONTACT FORM
             </Typography>
             <TextInputForm label="Name" />
