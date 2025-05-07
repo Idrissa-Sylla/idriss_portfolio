@@ -8,17 +8,10 @@ const useStyles = makeStyles((theme) => ({
   text: {
     paddingTop: "30px",
     paddingBottom: "10px",
+    color: "white",
   },
   hero_left: {
     alignContent: "center",
-  },
-  hero_section: {
-    // marginTop: { xs: "10", md: "70px" },
-    marginBottom: "30px",
-  },
-  action_button: {
-    color: "white",
-    borderRadius: "10px",
   },
 
   services_section: {
@@ -69,6 +62,13 @@ const useStyles = makeStyles((theme) => ({
   },
   contact_form_text: {
     paddingBottom: "20px",
+  },
+
+  gradient_text: {
+    // background: "linear-gradient(to right, #EE82EE, #87CEEB)",
+    background: "linear-gradient(to right, #A020F0, #4169E1)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
   },
 }));
 export default useStyles;

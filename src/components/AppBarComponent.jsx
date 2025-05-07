@@ -10,11 +10,13 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import useStyles from "../styles";
 
 const pages = ["SERVICES", "TECHNOLOGIES", "PORTFOLIO", "CONTACT"];
 const languages = ["ENGLISH", "FRANÇAIS"];
 
 function AppBarComponent() {
+  const classes = useStyles();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -42,7 +44,17 @@ function AppBarComponent() {
   };
 
   return (
-    <AppBar position="relative">
+    <AppBar
+      className={classes.appBar}
+      position="relative"
+      sx={{
+        backgroundColor: "#141525",
+        borderRadius: { xs: "10px", md: "20px" },
+        padding: { xs: "0px", md: "5px" },
+        md: { borderRadius: "20px", padding: "10px" },
+        border: "1px solid white",
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -58,6 +70,7 @@ function AppBarComponent() {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              paddingRight: "100px",
             }}
           >
             IDRISSA SYLLA
@@ -102,7 +115,7 @@ function AppBarComponent() {
           </Box>
 
           <Typography
-            variant="h5"
+            variant="h6"
             noWrap
             component="a"
             href="#"
@@ -120,7 +133,12 @@ function AppBarComponent() {
             Idrissa Sylla
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+            }}
+          >
             {pages.map((page) => (
               <Button
                 key={page}

@@ -48,11 +48,12 @@ function MainContent() {
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "row", lg: "row" },
-            paddingTop: { xs: "10px", sm: "20px", md: "40px" },
+            paddingTop: { xs: "10px", sm: "20px", md: "50px" },
           }}
         >
           <Grid className={classes.hero_left} size={{ xs: "12", sm: "grow" }}>
             <Typography
+              className={classes.gradient_text}
               variant="h2"
               fontSize={{ xs: "2rem", sm: "3rem", md: "3.75rem" }}
               lineHeight={{ xs: "3rem", sm: "4rem", md: "5rem" }}
@@ -60,12 +61,21 @@ function MainContent() {
               FULLSTACK WEB DEVELOPER AND MOBILE APPS
             </Typography>
             <Typography
-              variant="h6"
+              variant="h3"
               className={classes.text}
               sx={{ fontSize: { sm: "28px" } }}
             >
-              I am Idrissa Sylla - web and mobile app developer with a passion
-              for creating beautiful and responsive websites and apps
+              I am Idrissa Sylla - {""}
+              <Typography
+                display={{ md: "inline" }}
+                variant="h3"
+                className={(classes.text, classes.gradient_text)}
+                sx={{ fontSize: { sm: "28px" } }}
+              >
+                web and mobile app developer
+              </Typography>{" "}
+              with a passion for creating beautiful and responsive websites and
+              apps
             </Typography>
 
             <ActionButton
@@ -83,9 +93,7 @@ function MainContent() {
           </Grid>
         </Grid>
       </motion.div>
-
       <DividerComponent />
-
       <section id="SERVICES">
         <motion.div
           variants={sectionAnim}
@@ -141,13 +149,30 @@ function MainContent() {
             >
               <Grid className={classes.skills_desc}>
                 <Typography
+                  className={classes.subHeading}
                   variant="h4"
-                  sx={{ fontSize: { xs: "28px", sm: "38px" } }}
+                  sx={{
+                    fontSize: { xs: "24px", sm: "28px", md: "28px" },
+                    color: "white",
+                    marginLeft: { xs: "0px", sm: "0px", md: "220px" },
+                  }}
                 >
                   The Skills, tools, and technologies I use:
                 </Typography>
               </Grid>
-              <Grid className={classes.logos_row}>
+              <Grid
+                className={classes.logos_row}
+                sx={{
+                  marginLeft: { xs: "0px", sm: "0px", md: "200px" },
+                  marginRight: { xs: "0px", sm: "0px", md: "350px" },
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "20px",
+                }}
+              >
                 <img
                   className={classes.logos}
                   src="./assets/html-svgrepo-com.svg"
@@ -289,6 +314,7 @@ function MainContent() {
         </motion.div>
       </section>
 
+      <Box sx={{ marginTop: { xs: "0px", sm: "0px", md: "30px" } }}></Box>
       <DividerComponent />
 
       <section id="CONTACT">
@@ -300,12 +326,18 @@ function MainContent() {
         >
           <Box className={classes.contact_section}>
             <Grid container display="flex">
-              <Grid width="750px" paddingRight="50px">
+              <Grid width="550px" paddingRight="30px">
+                <Box
+                  sx={{ marginTop: { xs: "0px", sm: "0px", md: "15px" } }}
+                ></Box>
                 <SectionTitle title="DO YOU HAVE A PROJECT TO DISCUSS ?" />
                 <Typography
                   className={classes.get_in_touche}
                   variant="h4"
-                  sx={{ fontSize: { xs: "28px", sm: "38px" } }}
+                  sx={{
+                    fontSize: { xs: "24px", sm: "28px", md: "28px" },
+                    color: "white",
+                  }}
                 >
                   GET IN TOUCHE 💬
                 </Typography>
@@ -316,13 +348,18 @@ function MainContent() {
                   <div className={classes.mail_contact}>
                     <Typography
                       variant="h5"
-                      sx={{ fontSize: { xs: "24px", sm: "34px" } }}
+                      sx={{
+                        fontSize: { xs: "24px", sm: "24px", md: "24px" },
+                        color: "white",
+                      }}
                     >
                       CONTACT
                     </Typography>
                     <Typography
                       variant="h6"
-                      fontSize={{ xs: "24px", sm: "34px", md: "34px" }}
+                      fontSize={{ xs: "24px", sm: "28px", md: "18px" }}
+                      color="white"
+                      sx={{ marginTop: { xs: "0px", sm: "0px", md: "10px" } }}
                     >
                       idrisssylla88@gmail.com
                     </Typography>
@@ -332,8 +369,9 @@ function MainContent() {
                     <Typography
                       variant="h5"
                       sx={{
-                        fontSize: { xs: "24px", sm: "34px" },
-                        marginTop: { xs: "20px" },
+                        fontSize: { xs: "24px", sm: "24px", md: "24px" },
+                        color: "white",
+                        marginTop: { xs: "20px", sm: "0px", md: "0px" },
                         paddingBottom: { xs: "10px" },
                       }}
                     >
@@ -346,19 +384,19 @@ function MainContent() {
                       />
                       <SocialIcon
                         url="./assets/social_icons/facebook-176-svgrepo-com.svg"
-                        alt="linkedin logo"
+                        alt="facebook logo"
                       />
                       <SocialIcon
-                        url="./assets/social_icons/instagram-167-svgrepo-com.svg"
-                        alt="linkedin logo"
+                        url="./assets/social_icons/instagram-svgrepo-com.svg"
+                        alt="insta logo"
                       />
                       <SocialIcon
                         url="./assets/social_icons/whatsapp-svgrepo-com.svg"
-                        alt="linkedin logo"
+                        alt="whatsapp logo"
                       />
                       <SocialIcon
                         url="./assets/social_icons/telegram-svgrepo-com.svg"
-                        alt="linkedin logo"
+                        alt="telegram logo"
                       />
                     </Grid>
                   </Box>
@@ -369,7 +407,8 @@ function MainContent() {
                   className={classes.contact_form_text}
                   variant="h5"
                   sx={{
-                    fontSize: { xs: "24px", sm: "34px" },
+                    fontSize: { xs: "24px", sm: "24px", md: "24px" },
+                    color: "white",
                     marginTop: { xs: "20px" },
                   }}
                 >
@@ -379,6 +418,9 @@ function MainContent() {
                 <TextInputForm label="E-mail" />
                 <TextInputForm label="Message" />
                 <ActionButton buttonText="Send" />
+                <Box
+                  sx={{ marginBottom: { xs: "0px", sm: "0px", md: "50px" } }}
+                ></Box>
               </Grid>
             </Grid>
           </Box>

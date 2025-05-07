@@ -12,7 +12,6 @@ function TextInputForm(input) {
         "& > :not(style)": {
           m: 1,
           width: { xs: "40ch", sm: "60ch", md: "60ch" },
-          borderRadius: "20px",
         },
       }}
       noValidate
@@ -23,6 +22,32 @@ function TextInputForm(input) {
         id="outlined-basic"
         label={input.label}
         variant="outlined"
+        sx={{
+          "& .MuiOutlinedInput-root": {
+            "& fieldset": {
+              borderColor: "white",
+              borderRadius: "18px",
+            },
+            "&:hover fieldset": {
+              borderColor: "white",
+            },
+            "&.Mui-focused fieldset": {
+              borderColor: "white",
+            },
+          },
+          "& .MuiInputLabel-root": {
+            color: "white",
+          },
+          "& .MuiInputLabel-root.Mui-focused": {
+            color: "white",
+          },
+          "& .MuiInputBase-input": {
+            color: "white",
+          },
+          "& .MuiFormHelperText-root": {
+            color: "white",
+          },
+        }}
       />
     </Box>
   );

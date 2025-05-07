@@ -8,7 +8,8 @@ function Footer() {
         sx={{
           fontFamily: "Poppins",
           padding: { xs: "18px", sm: "20px", md: "20px" },
-          fontSize: { xs: "16px", sm: "24px", md: "24px" },
+          fontSize: { xs: "16px", sm: "18px", md: "18px" },
+          color: "white",
         }}
       >
         © {new Date().getFullYear()} - All rights reserved, UX/UI Design,

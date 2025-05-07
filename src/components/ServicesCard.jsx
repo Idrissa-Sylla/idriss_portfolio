@@ -19,6 +19,14 @@ function ServicesCard(card) {
         sx={{
           minWidth: { xs: "340px", sm: "750px", md: "500px" },
           maxHeight: 180,
+          backgroundColor: "#141525",
+          border: "1px solid white",
+          borderRadius: "20px",
+          boxShadow: "0px 0px 10px rgba(255, 255, 255, 0.1)",
+          "&:hover": {
+            backgroundColor: "#1e1e2f",
+            boxShadow: "0px 0px 20px rgba(255, 255, 255, 0.2)",
+          },
         }}
       >
         <CardActionArea
@@ -28,16 +36,22 @@ function ServicesCard(card) {
         >
           <CardContent>
             <Typography
-              variant="h4"
+              variant="h1"
               component="div"
-              sx={{ fontSize: { xs: "28px", sm: "38px" } }}
+              sx={{
+                fontSize: { xs: "28px", sm: "30px", sm: "30px" },
+                color: "white",
+              }}
             >
               {card.title}
             </Typography>
             <Typography
               variant="body1"
               color="text.secondary"
-              sx={{ fontSize: { xs: "18px", sm: "24px" } }}
+              sx={{
+                fontSize: { xs: "16px", sm: "18px", md: "18px" },
+                color: "white",
+              }}
             >
               {card.description}
             </Typography>

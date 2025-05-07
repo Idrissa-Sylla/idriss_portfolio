@@ -4,7 +4,11 @@ function DividerComponent() {
   return (
     <div>
       <Divider
-        sx={{ marginTop: "20px", marginBottom: "20px" }}
+        sx={{
+          marginTop: "0px",
+          marginBottom: "40px",
+          backgroundColor: "gray",
+        }}
         orientation="horzontal"
         variant="middle"
         flexItem
