@@ -37,7 +37,7 @@ function ServicesCard(card) {
             <Typography
               variant="body1"
               color="text.secondary"
-              sx={{ fontSize: { xs: "18px", sm: "28px" } }}
+              sx={{ fontSize: { xs: "18px", sm: "24px" } }}
             >
               {card.description}
             </Typography>

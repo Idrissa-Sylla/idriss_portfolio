@@ -10,10 +10,9 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import SettingsIcon from "@mui/icons-material/Settings";
 
 const pages = ["SERVICES", "TECHNOLOGIES", "PORTFOLIO", "CONTACT"];
-const settings = ["ENGLISH", "FRANÇAIS"];
+const languages = ["ENGLISH", "FRANÇAIS"];
 
 function AppBarComponent() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -34,18 +33,16 @@ function AppBarComponent() {
     setAnchorElUser(null);
   };
 
+  const handleScrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    handleCloseNavMenu();
+  };
+
   return (
-    <AppBar
-      // sx={{
-      //   maxWidth: "lg",
-      //   backgroundColor: "#000957",
-      //   borderRadius: "0.5rem",
-      //   maxHeight: "5rem",
-      //   alignContent: "center",
-      //   padding: "0.4rem",
-      // }}
-      position="relative"
-    >
+    <AppBar position="relative">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -94,7 +91,10 @@ function AppBarComponent() {
               sx={{ display: { xs: "block", md: "none" } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem
+                  key={page}
+                  onClick={() => handleScrollToSection(page)}
+                >
                   <Typography sx={{ textAlign: "center" }}>{page}</Typography>
                 </MenuItem>
               ))}
@@ -105,7 +105,7 @@ function AppBarComponent() {
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="#"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -119,21 +119,26 @@ function AppBarComponent() {
           >
             Idrissa Sylla
           </Typography>
+
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => handleScrollToSection(page)}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page}
               </Button>
             ))}
           </Box>
+
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+            <Tooltip title="Language">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <SettingsIcon sx={{ color: "white" }} />
+                <img
+                  src="/assets/language-svgrepo-com.svg"
+                  style={{ height: "24px", color: "red" }}
+                />
               </IconButton>
             </Tooltip>
             <Menu
@@ -152,7 +157,7 @@ function AppBarComponent() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
+              {languages.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography sx={{ textAlign: "center" }}>
                     {setting}
@@ -166,4 +171,5 @@ function AppBarComponent() {
     </AppBar>
   );
 }
+
 export default AppBarComponent;

@@ -11,7 +11,7 @@ function TextInputForm(input) {
       sx={{
         "& > :not(style)": {
           m: 1,
-          width: { xs: "40ch", sm: "60ch", md: "70ch" },
+          width: { xs: "40ch", sm: "60ch", md: "60ch" },
           borderRadius: "20px",
         },
       }}
