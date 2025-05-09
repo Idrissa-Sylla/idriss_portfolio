@@ -8,7 +8,11 @@ function SectionTitle(text) {
       <Typography
         className={(classes.services_text, classes.gradient_text)}
         variant="h4"
-        sx={{ marginBottom: "30px", color: "white" }}
+        sx={{
+          marginBottom: "30px",
+          color: "white",
+          fontSize: { xs: "32px", sm: "40px", md: "48px" },
+        }}
       >
         {text.title}
       </Typography>

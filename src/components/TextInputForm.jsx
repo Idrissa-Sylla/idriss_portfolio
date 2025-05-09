@@ -10,7 +10,8 @@ function TextInputForm(input) {
       component="form"
       sx={{
         "& > :not(style)": {
-          m: 1,
+          mt: { xs: 1, sm: 1, md: 1 },
+          mb: { xs: 1, sm: 1, md: 1 },
           width: { xs: "40ch", sm: "60ch", md: "60ch" },
         },
       }}

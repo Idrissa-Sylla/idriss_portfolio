@@ -63,14 +63,18 @@ function MainContent() {
             <Typography
               variant="h3"
               className={classes.text}
-              sx={{ fontSize: { sm: "28px" } }}
+              sx={{
+                fontSize: { xs: "20px", sm: "28px" },
+                paddingTop: { xs: "10px", sm: "20px", md: "30px" },
+                lineHeight: { xs: "1.8rem", sm: "2.5rem", md: "2.5rem" },
+              }}
             >
               I am Idrissa Sylla - {""}
               <Typography
                 display={{ md: "inline" }}
                 variant="h3"
                 className={(classes.text, classes.gradient_text)}
-                sx={{ fontSize: { sm: "28px" } }}
+                sx={{ fontSize: { xs: "20px", sm: "28px" } }}
               >
                 web and mobile app developer
               </Typography>{" "}
@@ -105,7 +109,7 @@ function MainContent() {
             <SectionTitle title="MY SERVICES" />
             <Grid
               container
-              spacing={3}
+              spacing={{ xs: 2, sm: 3, md: 5 }}
               sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}
             >
               <Grid size={{ xs: 2, md: 2 }} offset={{ xs: 0, md: 0 }}>
@@ -114,7 +118,7 @@ function MainContent() {
                   description="I develop full stack web applications with focus on functionality and beautiful user interfaces and UX"
                 />
               </Grid>
-              <Grid size={{ xs: 4, md: 6 }} offset={{ md: "auto" }}>
+              <Grid size={{ xs: 4, md: 7 }} offset={{ md: "auto" }}>
                 <ServicesCard
                   title="📲 Mobile App Development"
                   description="I develop mobile applications with focus on functionality and beautiful user interfaces and UX"
@@ -154,7 +158,7 @@ function MainContent() {
                   sx={{
                     fontSize: { xs: "24px", sm: "28px", md: "28px" },
                     color: "white",
-                    marginLeft: { xs: "0px", sm: "0px", md: "220px" },
+                    marginLeft: { xs: "45px", sm: "0px", md: "220px" },
                   }}
                 >
                   The Skills, tools, and technologies I use:
@@ -164,7 +168,7 @@ function MainContent() {
                 className={classes.logos_row}
                 sx={{
                   marginLeft: { xs: "0px", sm: "0px", md: "200px" },
-                  marginRight: { xs: "0px", sm: "0px", md: "350px" },
+                  marginRight: { xs: "30px", sm: "0px", md: "350px" },
                   display: "flex",
                   flexDirection: "row",
                   flexWrap: "wrap",
@@ -284,9 +288,10 @@ function MainContent() {
             <SectionTitle title="PORTFOLIO" />
             <Grid
               container
-              gap={2}
+              gap={1}
               alignContent={"center"}
               alignItems={"center"}
+              marginLeft={{ xs: "15px" }}
             >
               <Grid className={classes.portfolio_row}>
                 <ProjectCard
@@ -324,9 +329,15 @@ function MainContent() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <Box className={classes.contact_section}>
+          <Box
+            className={classes.contact_section}
+            sx={{ marginLeft: { xs: "4px" } }}
+          >
             <Grid container display="flex">
-              <Grid width="550px" paddingRight="30px">
+              <Grid
+                width="550px"
+                paddingRight={{ xs: "0px", sm: "0px", md: "30px" }}
+              >
                 <Box
                   sx={{ marginTop: { xs: "0px", sm: "0px", md: "15px" } }}
                 ></Box>
@@ -349,7 +360,7 @@ function MainContent() {
                     <Typography
                       variant="h5"
                       sx={{
-                        fontSize: { xs: "24px", sm: "24px", md: "24px" },
+                        fontSize: { xs: "20px", sm: "24px", md: "24px" },
                         color: "white",
                       }}
                     >
@@ -357,7 +368,7 @@ function MainContent() {
                     </Typography>
                     <Typography
                       variant="h6"
-                      fontSize={{ xs: "24px", sm: "28px", md: "18px" }}
+                      fontSize={{ xs: "18px", sm: "28px", md: "18px" }}
                       color="white"
                       sx={{ marginTop: { xs: "0px", sm: "0px", md: "10px" } }}
                     >
@@ -369,7 +380,7 @@ function MainContent() {
                     <Typography
                       variant="h5"
                       sx={{
-                        fontSize: { xs: "24px", sm: "24px", md: "24px" },
+                        fontSize: { xs: "20px", sm: "24px", md: "24px" },
                         color: "white",
                         marginTop: { xs: "20px", sm: "0px", md: "0px" },
                         paddingBottom: { xs: "10px" },
@@ -419,7 +430,7 @@ function MainContent() {
                 <TextInputForm label="Message" />
                 <ActionButton buttonText="Send" />
                 <Box
-                  sx={{ marginBottom: { xs: "0px", sm: "0px", md: "50px" } }}
+                  sx={{ marginBottom: { xs: "10px", sm: "10px", md: "50px" } }}
                 ></Box>
               </Grid>
             </Grid>

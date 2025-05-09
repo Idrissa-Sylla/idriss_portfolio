@@ -43,9 +43,7 @@ const useStyles = makeStyles((theme) => ({
   portfolio_row: {
     paddingRight: "20px",
   },
-  formSection: {
-    // paddingTop: "90px",
-  },
+
   social_icon: {
     marginRight: "20px",
     color: "red",

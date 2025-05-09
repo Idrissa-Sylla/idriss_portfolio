@@ -11,8 +11,8 @@ function App() {
       <Box
         className={classes.app}
         sx={{
-          marginLeft: { xs: "5px", sm: "10px", md: "60px" },
-          marginRight: { xs: "5px", sm: "10px", md: "60px" },
+          marginLeft: { xs: "10px", sm: "10px", md: "60px" },
+          marginRight: { xs: "10px", sm: "10px", md: "60px" },
         }}
       >
         <Box

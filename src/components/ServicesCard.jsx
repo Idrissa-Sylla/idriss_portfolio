@@ -17,7 +17,7 @@ function ServicesCard(card) {
     >
       <Card
         sx={{
-          minWidth: { xs: "340px", sm: "750px", md: "500px" },
+          minWidth: { xs: "320px", sm: "750px", md: "600px" },
           maxHeight: 180,
           backgroundColor: "#141525",
           border: "1px solid white",

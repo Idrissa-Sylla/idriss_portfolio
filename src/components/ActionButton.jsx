@@ -15,6 +15,7 @@ function ActionButton(props) {
           padding: { xs: "8px 30px", sm: "10px 40px", md: "7px 30px" },
           marginTop: "10px",
           color: "white",
+          borderColor: "white",
         }}
       >
         {props.buttonText}
