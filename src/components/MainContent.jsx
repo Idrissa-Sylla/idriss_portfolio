@@ -5,6 +5,7 @@ import {
   Box,
   Grid,
   Divider,
+  Link,
 } from "@mui/material";
 import useStyles from "../styles";
 import ServicesCard from "./ServicesCard";
@@ -14,7 +15,7 @@ import TextInputForm from "../components/TextInputForm";
 import ActionButton from "./ActionButton";
 import SocialIcon from "./SocialIcon";
 import DividerComponent from "../components/DividerComponent";
-import { delay, motion } from "framer-motion";
+import { color, delay, motion } from "framer-motion";
 
 function MainContent() {
   const sectionAnim = {
@@ -372,7 +373,14 @@ function MainContent() {
                       color="white"
                       sx={{ marginTop: { xs: "0px", sm: "0px", md: "10px" } }}
                     >
-                      idrisssylla88@gmail.com
+                      <Link
+                        href="mailto:idrisssylla88@gmail.com"
+                        sx={{ color: "white", textDecoration: "none" }}
+                        underline="hover"
+                      >
+                        {" "}
+                        idrisssylla88@gmail.com
+                      </Link>
                     </Typography>
                   </div>
 
@@ -389,26 +397,49 @@ function MainContent() {
                       SOCIAL MEDIA
                     </Typography>
                     <Grid display="flex">
-                      <SocialIcon
-                        url="./assets/social_icons/linkedin-svgrepo-com.svg"
-                        alt="linkedin logo"
-                      />
-                      <SocialIcon
-                        url="./assets/social_icons/facebook-176-svgrepo-com.svg"
-                        alt="facebook logo"
-                      />
-                      <SocialIcon
-                        url="./assets/social_icons/instagram-svgrepo-com.svg"
-                        alt="insta logo"
-                      />
-                      <SocialIcon
-                        url="./assets/social_icons/whatsapp-svgrepo-com.svg"
-                        alt="whatsapp logo"
-                      />
-                      <SocialIcon
-                        url="./assets/social_icons/telegram-svgrepo-com.svg"
-                        alt="telegram logo"
-                      />
+                      <a
+                        href="https://www.linkedin.com/in/sylla-idrissa-912a1215a"
+                        target="_blank"
+                      >
+                        <SocialIcon
+                          url="./assets/social_icons/linkedin-svgrepo-com.svg"
+                          alt="linkedin logo"
+                        />
+                      </a>
+                      <a
+                        href="https://www.facebook.com/share/16W63dDFwg/?mibextid=wwXIfr"
+                        target="_blank"
+                      >
+                        <SocialIcon
+                          url="./assets/social_icons/facebook-176-svgrepo-com.svg"
+                          alt="facebook logo"
+                        />
+                      </a>
+
+                      <a
+                        href="https://www.instagram.com/idriss_ritchie?igsh=MWQzYndnZjUwbG01aQ%3D%3D&utm_source=qr"
+                        target="_blank"
+                      >
+                        <SocialIcon
+                          url="./assets/social_icons/instagram-svgrepo-com.svg"
+                          alt="insta logo"
+                        />
+                      </a>
+                      <a
+                        href="https://api.whatsapp.com/send?phone=+224664683646&text=Hello Idrissa Sylla"
+                        target="_blank"
+                      >
+                        <SocialIcon
+                          url="./assets/social_icons/whatsapp-svgrepo-com.svg"
+                          alt="whatsapp logo"
+                        />
+                      </a>
+                      <a href="https://t.me/idriss_ritchie" target="_blank">
+                        <SocialIcon
+                          url="./assets/social_icons/telegram-svgrepo-com.svg"
+                          alt="telegram logo"
+                        />
+                      </a>
                     </Grid>
                   </Box>
                 </Grid>

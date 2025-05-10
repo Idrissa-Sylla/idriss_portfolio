@@ -40,6 +40,7 @@ function AppBarComponent() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+
     handleCloseNavMenu();
   };
 
@@ -141,9 +142,15 @@ function AppBarComponent() {
           >
             {pages.map((page) => (
               <Button
+                className={classes.navButton}
                 key={page}
                 onClick={() => handleScrollToSection(page)}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  ":hover": { color: "#141525", backgroundColor: "white" },
+                }}
               >
                 {page}
               </Button>
