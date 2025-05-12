@@ -12,7 +12,7 @@ i18n
     fallbackLng: "en", // Default language if detection fails
     debug: process.env.NODE_ENV === "development", // Enable debugging in development
     backend: {
-      loadPath: "/src/locales/{{lng}}/{{ns}}.json", // Path to your translation files
+      loadPath: "/locales/{{lng}}/{{ns}}.json", // Path to your translation files
     },
     interpolation: {
       escapeValue: false, // Not needed for React as it escapes by default
