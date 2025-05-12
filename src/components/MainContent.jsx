@@ -16,8 +16,14 @@ import ActionButton from "./ActionButton";
 import SocialIcon from "./SocialIcon";
 import DividerComponent from "../components/DividerComponent";
 import { color, delay, motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 function MainContent() {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
   const sectionAnim = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -59,8 +65,9 @@ function MainContent() {
               fontSize={{ xs: "2rem", sm: "3rem", md: "3.75rem" }}
               lineHeight={{ xs: "3rem", sm: "4rem", md: "5rem" }}
             >
-              FULLSTACK WEB DEVELOPER AND MOBILE APPS
+              {t("FULLSTACK WEB AND MOBILE APP DEVELOPER")}
             </Typography>
+
             <Typography
               variant="h3"
               className={classes.text}
@@ -70,21 +77,20 @@ function MainContent() {
                 lineHeight: { xs: "1.8rem", sm: "2.5rem", md: "2.5rem" },
               }}
             >
-              I am Idrissa Sylla - {""}
-              <Typography
-                display={{ md: "inline" }}
-                variant="h3"
-                className={(classes.text, classes.gradient_text)}
-                sx={{ fontSize: { xs: "20px", sm: "28px" } }}
+              {t("I am Idrissa Sylla - ")}{" "}
+              <span
+                className={`${classes.text} ${classes.gradient_text}`}
+                style={{ display: "inline", fontSize: "inherit" }}
               >
-                web and mobile app developer
-              </Typography>{" "}
-              with a passion for creating beautiful and responsive websites and
-              apps
+                {t("web and mobile app developer")}
+              </span>{" "}
+              {t(
+                "with a passion for creating beautiful and responsive websites and apps"
+              )}
             </Typography>
 
             <ActionButton
-              buttonText="VIEW MY WORK"
+              buttonText={t("VIEW MY WORK")}
               onClick={handleScrollToPortfolio}
             />
           </Grid>
@@ -107,7 +113,7 @@ function MainContent() {
           viewport={{ once: true }}
         >
           <Box className={classes.services_section} sx={{ marginTop: "30px" }}>
-            <SectionTitle title="MY SERVICES" />
+            <SectionTitle title={t("MY SERVICES")} />
             <Grid
               container
               spacing={{ xs: 2, sm: 3, md: 5 }}
@@ -115,20 +121,26 @@ function MainContent() {
             >
               <Grid size={{ xs: 2, md: 2 }} offset={{ xs: 0, md: 0 }}>
                 <ServicesCard
-                  title="👨🏻‍💻 Web Development"
-                  description="I develop full stack web applications with focus on functionality and beautiful user interfaces and UX"
+                  title={t("👨🏻‍💻 Web Development")}
+                  description={t(
+                    "I develop full stack web applications with focus on functionality and beautiful user interfaces and UX"
+                  )}
                 />
               </Grid>
               <Grid size={{ xs: 4, md: 7 }} offset={{ md: "auto" }}>
                 <ServicesCard
-                  title="📲 Mobile App Development"
-                  description="I develop mobile applications with focus on functionality and beautiful user interfaces and UX"
+                  title={t("📲 Mobile App Development")}
+                  description={t(
+                    "I develop mobile applications with focus on functionality and beautiful user interfaces and UX"
+                  )}
                 />
               </Grid>
               <Grid size={{ xs: 6, md: 2 }} offset={{ xs: 0, md: 0 }}>
                 <ServicesCard
-                  title="☺ UX/UI Design"
-                  description="I design high fidelity user interfaces with focus on functionality and beautiful user interfaces and UX"
+                  title={t("☺ UX/UI Design")}
+                  description={t(
+                    "I design high fidelity user interfaces with focus on functionality and beautiful user interfaces and UX"
+                  )}
                 />
               </Grid>
             </Grid>
@@ -144,7 +156,10 @@ function MainContent() {
           viewport={{ once: true }}
         >
           <Box className={classes.skills_section}>
-            <SectionTitle className={classes.skills_title} title="SKILLS" />
+            <SectionTitle
+              className={classes.skills_title}
+              title={t("SKILLS")}
+            />
             <Grid
               className={classes.logos_container}
               container
@@ -162,7 +177,7 @@ function MainContent() {
                     marginLeft: { xs: "45px", sm: "0px", md: "220px" },
                   }}
                 >
-                  The Skills, tools, and technologies I use:
+                  {t("The Skills, tools, and technologies I use:")}
                 </Typography>
               </Grid>
               <Grid
@@ -286,34 +301,64 @@ function MainContent() {
           viewport={{ once: true }}
         >
           <Box className={classes.portfolio_section}>
-            <SectionTitle title="PORTFOLIO" />
+            <SectionTitle title={t("PORTFOLIO")} />
             <Grid
               container
-              gap={1}
+              gap={2}
               alignContent={"center"}
               alignItems={"center"}
               marginLeft={{ xs: "15px" }}
             >
               <Grid className={classes.portfolio_row}>
-                <ProjectCard
-                  url="./assets/movie_app.png"
-                  title="Movie App"
-                  text="This app allows user to search and view their favorite movies. They have the ability to favorite a particular movie and unfavorite it also"
-                />
+                <a
+                  href="https://nimba-movies.netlify.app/"
+                  target="_blank"
+                  style={{
+                    textDecoration: "none",
+                  }}
+                >
+                  <ProjectCard
+                    url="./assets/movie_app.png"
+                    title={t("Movie App")}
+                    text={t(
+                      "This app allows user to search and view their favorite movies. They have the ability to favorite a particular movie and unfavorite it also"
+                    )}
+                  />
+                </a>
               </Grid>
               <Grid className={classes.portfolio_row}>
-                <ProjectCard
-                  url="./assets/todo_app.png"
-                  title="Todo App"
-                  text="This TODO App helps users in organizing their daily tasks. They have the ability to check and uncheck a task."
-                />
+                <a
+                  href="https://ritchie-todo-app.netlify.app/"
+                  target="_blank"
+                  style={{
+                    textDecoration: "none",
+                  }}
+                >
+                  <ProjectCard
+                    url="./assets/todo_app.png"
+                    title={t("Todo App")}
+                    text={t(
+                      "This TODO App helps users in organizing their daily tasks. They have the ability to check and uncheck a task."
+                    )}
+                  />
+                </a>
               </Grid>
               <Grid className={classes.portfolio_row}>
-                <ProjectCard
-                  url="./assets/photo_album_app.png"
-                  title="Photo Album App"
-                  text="This photo album app displays my photos and allows users to view all my albums. I have captured crucial moments of my life which I think is worth sharing."
-                />
+                <a
+                  href="https://ritchie-photo-album.netlify.app/"
+                  target="_blank"
+                  style={{
+                    textDecoration: "none",
+                  }}
+                >
+                  <ProjectCard
+                    url="./assets/photo_album_app.png"
+                    title={t("Photo Album App")}
+                    text={t(
+                      "This photo album app displays my photos and allows users to view all my albums. I have captured crucial moments of my life which I think is worth sharing."
+                    )}
+                  />
+                </a>
               </Grid>
             </Grid>
           </Box>
@@ -342,7 +387,7 @@ function MainContent() {
                 <Box
                   sx={{ marginTop: { xs: "0px", sm: "0px", md: "15px" } }}
                 ></Box>
-                <SectionTitle title="DO YOU HAVE A PROJECT TO DISCUSS ?" />
+                <SectionTitle title={t("DO YOU HAVE A PROJECT TO DISCUSS ?")} />
                 <Typography
                   className={classes.get_in_touche}
                   variant="h4"
@@ -351,7 +396,7 @@ function MainContent() {
                     color: "white",
                   }}
                 >
-                  GET IN TOUCHE 💬
+                  {t("GET IN TOUCHE 💬")}
                 </Typography>
                 <Grid
                   display={"flex"}
@@ -365,7 +410,7 @@ function MainContent() {
                         color: "white",
                       }}
                     >
-                      CONTACT
+                      {t("CONTACT")}
                     </Typography>
                     <Typography
                       variant="h6"
@@ -394,7 +439,7 @@ function MainContent() {
                         paddingBottom: { xs: "10px" },
                       }}
                     >
-                      SOCIAL MEDIA
+                      {t("SOCIAL MEDIA")}
                     </Typography>
                     <Grid display="flex">
                       <a
@@ -454,12 +499,12 @@ function MainContent() {
                     marginTop: { xs: "20px" },
                   }}
                 >
-                  CONTACT FORM
+                  {t("CONTACT FORM")}
                 </Typography>
-                <TextInputForm label="Name" />
+                <TextInputForm label={t("Name")} />
                 <TextInputForm label="E-mail" />
                 <TextInputForm label="Message" />
-                <ActionButton buttonText="Send" />
+                <ActionButton buttonText={t("Send")} />
                 <Box
                   sx={{ marginBottom: { xs: "10px", sm: "10px", md: "50px" } }}
                 ></Box>

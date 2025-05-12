@@ -6,8 +6,10 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardActions from "@mui/material/CardActions";
+import { useTranslation } from "react-i18next";
 
 function ProjectCard(card) {
+  const { t, i18n } = useTranslation();
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -28,7 +30,7 @@ function ProjectCard(card) {
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          Checkout
+          {t("Checkout")}
         </Button>
       </CardActions>
     </Card>

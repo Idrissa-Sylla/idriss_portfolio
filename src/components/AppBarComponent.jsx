@@ -11,28 +11,40 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import useStyles from "../styles";
+import { useTranslation } from "react-i18next";
+import LanguageIcon from "@mui/icons-material/Language";
 
 const pages = ["SERVICES", "TECHNOLOGIES", "PORTFOLIO", "CONTACT"];
-const languages = ["ENGLISH", "FRANÇAIS"];
+const languageOptions = [
+  { code: "en", name: "ENGLISH" },
+  { code: "fr", name: "FRANÇAIS" },
+];
 
 function AppBarComponent() {
+  const { t, i18n } = useTranslation();
   const classes = useStyles();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElLang, setAnchorElLang] = React.useState(null); // State for language menu
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
+
+  const handleOpenLangMenu = (event) => {
+    setAnchorElLang(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
+  const handleCloseLangMenu = () => {
+    setAnchorElLang(null);
+  };
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    handleCloseLangMenu();
   };
 
   const handleScrollToSection = (sectionId) => {
@@ -40,7 +52,6 @@ function AppBarComponent() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-
     handleCloseNavMenu();
   };
 
@@ -109,7 +120,9 @@ function AppBarComponent() {
                   key={page}
                   onClick={() => handleScrollToSection(page)}
                 >
-                  <Typography sx={{ textAlign: "center" }}>{page}</Typography>
+                  <Typography sx={{ textAlign: "center" }}>
+                    {t(page)}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -152,24 +165,24 @@ function AppBarComponent() {
                   ":hover": { color: "#141525", backgroundColor: "white" },
                 }}
               >
-                {page}
+                {t(page)}
               </Button>
             ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Language">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <img
-                  src="/assets/language-svgrepo-com.svg"
-                  style={{ height: "24px", color: "red" }}
-                />
+            <Tooltip title={t("Language")}>
+              <IconButton
+                onClick={handleOpenLangMenu}
+                sx={{ p: 0, color: "white" }}
+              >
+                <LanguageIcon />
               </IconButton>
             </Tooltip>
             <Menu
               sx={{ mt: "45px" }}
               id="menu-appbar"
-              anchorEl={anchorElUser}
+              anchorEl={anchorElLang}
               anchorOrigin={{
                 vertical: "top",
                 horizontal: "right",
@@ -179,13 +192,16 @@ function AppBarComponent() {
                 vertical: "top",
                 horizontal: "right",
               }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+              open={Boolean(anchorElLang)}
+              onClose={handleCloseLangMenu}
             >
-              {languages.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+              {languageOptions.map((lang) => (
+                <MenuItem
+                  key={lang.code}
+                  onClick={() => changeLanguage(lang.code)}
+                >
                   <Typography sx={{ textAlign: "center" }}>
-                    {setting}
+                    {t(lang.name)}
                   </Typography>
                 </MenuItem>
               ))}

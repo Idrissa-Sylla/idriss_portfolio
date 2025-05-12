@@ -1,7 +1,9 @@
 import React from "react";
 import { Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  const { t, i18n } = useTranslation();
   return (
     <div>
       <Typography
@@ -12,9 +14,10 @@ function Footer() {
           color: "white",
         }}
       >
-        © {new Date().getFullYear()} - All rights reserved, UX/UI Design,
-        Fullstack web dev, Mobile App dev, Graphic Design, Community Manager -
-        Idrissa Sylla
+        © {new Date().getFullYear()} -{" "}
+        {t(
+          "All rights reserved, UX/UI Design,Fullstack web dev, Mobile App dev, Graphic Design, Community Manager - Idrissa Sylla"
+        )}
       </Typography>
     </div>
   );
