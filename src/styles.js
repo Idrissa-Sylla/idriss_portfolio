@@ -63,8 +63,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   gradient_text: {
-    // background: "linear-gradient(to right, #EE82EE, #87CEEB)",
-    background: "linear-gradient(to right, #A020F0, #4169E1)",
+    background: "linear-gradient(to right, #12c2e9, #c471ed, #f64f59)",
+    // background: "linear-gradient(to right, #A020F0, #4169E1)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
   },
